@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\ApiFront;
 
 use App\Appointment;
+use App\Helpers\DateHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ApiFront\Appointment\StoreAppointmentRequest;
 use Illuminate\Http\JsonResponse;
@@ -38,7 +39,7 @@ class AppointmentController extends Controller
             'phone' => $validatedData['phone'],
             'email' => $validatedData['email'],
             'message' => $validatedData['message'],
-            'appointment_date' => $validatedData['appointment_date']
+            'appointment_date' => DateHelper::convertLocalToUTC($validatedData['localTZ'], $validatedData['appointment_date'])
         ]);
 
         return response()->json($appointment);
