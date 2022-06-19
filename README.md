@@ -1,3 +1,18 @@
+# NOTES
+
+Pour lancer le projet :
+> composer i
+
+> npm i && npm run dev
+
+> php artisan migrate
+
+Pour lancer les tests :
+> php artisan test
+
+URL de l'api Publique (url et port dépendent de la configuration locale) :
+> http://localhost:8000/api/appointments
+
 # Laravel level 2
 **L'objectif de ce test est d'observer votre raisonnement et l'application des bonnes pratiques Laravel préconisées dans la documentation au travers d'un développement similaire à ce qui se fait chez Bynativ.**
 

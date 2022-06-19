@@ -41,7 +41,8 @@ class AppointmentTest extends TestCase
             'name' => 'Doe',
             'email' => 'john.doe@example.com',
             'phone' => '0612345678',
-            'appointment_date' => '2022-01-01 12:00:00',
+            'appointment_date' => '2022-01-01 12:00',
+            'message' => 'Ceci est un message',
             'localTZ' => 'Europe/Paris'
         ]);
 

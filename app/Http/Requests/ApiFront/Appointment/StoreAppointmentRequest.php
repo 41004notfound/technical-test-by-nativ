@@ -17,9 +17,9 @@ class StoreAppointmentRequest extends FormRequest
             'name' => ['required', 'string'],
             'phone' => ['required', 'regex:/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/'],
             'email' => ['required', 'email'],
-            'messages' => ['string', 'nullable'],
+            'message' => ['string', 'nullable'],
             'localTZ' => ['required', 'timezone'],
-            'appointment_date' => ['required', 'date_format:Y-m-d H:i:s']
+            'appointment_date' => ['required', 'date_format:Y-m-d H:i']
         ];
     }
 

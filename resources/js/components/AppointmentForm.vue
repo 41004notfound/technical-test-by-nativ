@@ -36,7 +36,7 @@
                     <v-text-field
                         v-model="form.appointment_date"
                         label="Date désirée"
-                        placeholder="Ex: 2022-07-02 12:00:00"
+                        placeholder="Ex: 2021-12-31 12:00"
                         required
                     ></v-text-field>
                 </v-col>
