@@ -19,6 +19,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('appointments')->as('appointments.')->group(function () {
     Route::get('/', [AppointmentController::class, 'index'])->name('index');
+    Route::get('/create', [AppointmentController::class, 'create'])->name('create');
 
     Route::prefix('{appointment}')->group(function () {
         Route::get('/', [AppointmentController::class, 'show'])->name('show');

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Appointment;
+
 class AppointmentController extends Controller
 {
     /**
@@ -29,8 +31,10 @@ class AppointmentController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function show()
+    public function show(Appointment $appointment)
     {
-        return view('appointments.show');
+        return view('appointments.show', [
+            'appointment' => $appointment
+        ]);
     }
 }

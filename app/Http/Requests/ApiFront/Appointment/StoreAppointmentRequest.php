@@ -17,9 +17,26 @@ class StoreAppointmentRequest extends FormRequest
             'name' => ['required', 'string'],
             'phone' => ['required', 'regex:/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/'],
             'email' => ['required', 'email'],
-            'message' => ['string'],
+            'messages' => ['string', 'nullable'],
             'localTZ' => ['required', 'timezone'],
             'appointment_date' => ['required', 'date_format:Y-m-d H:i:s']
+        ];
+    }
+
+    /**
+     * Get the validation attributs names
+     *
+     * @return array
+     */
+    public function attributes(): array
+    {
+        return [
+            'name' => 'Nom',
+            'phone' => 'Téléphone',
+            'email' => 'Email',
+            'appointment_date' => 'Date désirée',
+            'message' => 'Commentaire',
+            'localTZ' => 'Fuseau horaire'
         ];
     }
 }
