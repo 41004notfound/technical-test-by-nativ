@@ -38,7 +38,7 @@ class AppointmentController extends Controller
             'name' => $validatedData['name'],
             'phone' => $validatedData['phone'],
             'email' => $validatedData['email'],
-            'messages' => $validatedData['messages'] ?? null,
+            'message' => $validatedData['message'] ?? null,
             'appointment_date' => DateHelper::convertLocalToUTC($validatedData['localTZ'], $validatedData['appointment_date'])
         ]);
 

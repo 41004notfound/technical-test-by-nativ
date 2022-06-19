@@ -43,7 +43,7 @@
 
                 <v-col cols="12" md="6">
                     <v-text-field
-                        v-model="form.messages"
+                        v-model="form.message"
                         label="Commentaires"
                     ></v-text-field>
                 </v-col>
@@ -88,7 +88,7 @@ export default {
             phone: null,
             email: null,
             appointment_date: null,
-            messages: null,
+            message: null,
             localTZ: "Europe/Paris",
             _token: document.querySelector('meta[name="_token"]').getAttribute('content')
         }

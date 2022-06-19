@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 
 /**
@@ -19,6 +20,8 @@ use Illuminate\Support\Carbon;
  */
 class Appointment extends Model
 {
+    use Notifiable;
+
     /** @var string[] */
     protected $fillable = [
         'name',
