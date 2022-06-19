@@ -3,9 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Appointment;
-use App\Helpers\DateHelper;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ApiFront\Appointment\StoreAppointmentRequest;
 use Illuminate\Http\JsonResponse;
 
 class AppointmentController extends Controller

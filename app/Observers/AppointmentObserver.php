@@ -4,8 +4,6 @@ namespace App\Observers;
 
 use App\Appointment;
 use App\Notifications\AppointmentCreated;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Log;
 
 class AppointmentObserver
 {
