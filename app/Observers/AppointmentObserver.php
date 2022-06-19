@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Appointment;
 use App\Notifications\AppointmentCreated;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 
 class AppointmentObserver
@@ -16,7 +17,6 @@ class AppointmentObserver
      */
     public function created(Appointment $appointment)
     {
-        Log::error('observer OK');
         $appointment->notify(new AppointmentCreated($appointment));
     }
 

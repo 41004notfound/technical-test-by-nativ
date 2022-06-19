@@ -22,7 +22,8 @@
                 </v-col>
 
                 <v-col cols="12" md="3">
-                    <span class="font-weight-bold">Date désirée :</span> {{ appointment.appointment_date }}
+                    <span class="font-weight-bold">Date désirée :</span>
+                    {{ convertToLocal(appointment.appointment_date) }}
                 </v-col>
 
                 <v-col cols="12" md="12">
@@ -34,13 +35,15 @@
 </template>
 
 <script>
+import moment from "moment";
+import "moment-timezone"
 export default {
     name: 'AppointmentShowComponent',
 
     props: {
         appointmentId: {
             type: Number,
-            requried: true
+            required: true
         }
     },
 
@@ -58,6 +61,12 @@ export default {
             .catch(({ response }) => {
                 this.errors = ['Une erreur innatendue s‘est produite.']
             })
+    },
+
+    methods: {
+        convertToLocal (date) {
+            return moment.utc(moment(date).format('YYYY-MM-DD HH:mm:ss')).local().format('DD-MM-YYYY HH:mm');
+        }
     }
 }
 </script>

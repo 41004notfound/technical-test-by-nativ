@@ -20,11 +20,22 @@
                             <p>Votre demande :</p>
 
                            <ul>
-                               <li><span class="font-weight-bold">Nom :</span> {{ $appointment->name }}</li>
-                               <li><span class="font-weight-bold">Téléphone :</span> {{ $appointment->phone }}</li>
-                               <li><span class="font-weight-bold">Adresse Email :</span> {{ $appointment->email }}</li>
-                               <li><span class="font-weight-bold">Date désirée :</span> {{ $appointment->appointment_date }}</li>
-                               <li><span class="font-weight-bold">Message :</span> {{ $appointment->messages }}</li>
+                               <li>
+                                   <span class="font-weight-bold">Nom :</span> {{ $appointment->name }}
+                               </li>
+                               <li>
+                                   <span class="font-weight-bold">Téléphone :</span> {{ $appointment->phone }}
+                               </li>
+                               <li>
+                                   <span class="font-weight-bold">Adresse Email :</span> {{ $appointment->email }}
+                               </li>
+                               <li>
+                                   <span class="font-weight-bold">Date désirée :</span>
+                                   {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $appointment->appointment_date, 'Europe/Paris')->format('d-m-Y H:i') }}
+                               </li>
+                               <li>
+                                   <span class="font-weight-bold">Message :</span> {{ $appointment->messages }}
+                               </li>
                            </ul>
                         </td>
                     </tr>
